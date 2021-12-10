@@ -22,10 +22,12 @@ const form = document.querySelector("#changeCityForm")
 form.addEventListener('submit', changeWeather);
 
 function changeWeather(e){
-    const city = document.querySelector("#changeCityValue").value;
+    let city = document.querySelector("#changeCityValue").value;
     weather.changeCity(city);
     getWeather();
     ls.setLocationData(city);
-    city.textContent = "";
+    document.querySelector("#changeCityValue").value = "";
     e.preventDefault();
+    console.log("dez")
+
 }
